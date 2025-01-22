@@ -511,6 +511,13 @@ color: #434455;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.btn-close-modal:hover,
+.btn-close-modal:focus{
+    color: #404bbf;
+    stroke: #ffffff;
+
+}
+
 
 .modal-form {}
 
@@ -530,6 +537,8 @@ color: #434455;
 }
 
 .modal-filed {
+    position: relative;
+    margin-bottom: 8px;
     
 }
 
@@ -540,7 +549,25 @@ color: #434455;
     height: 40px;
     padding: 16px 8px;
     background-color: transparent;
+    
+
 }
+.modal-filed-input:focus{
+    border: 1px solid #4d5ae5;
+}
+.modal-form-field-icon{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    stroke: none;
+    fill: #2e2f42;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-filed-input:focus + .modal-form-field-icon{
+    fill: #4d5ae5;
+}
+
 
 .modal-textarea-wrapper {
     margin-bottom: 16px;
@@ -554,16 +581,79 @@ color: #434455;
         padding: 16px 8px;
         resize: none;
 }
+.modal-textarea::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
 
-.modal-wrapper-checkbox {}
+.modal-wrapper-checkbox {
+    margin-bottom: 24px;
+}
 
-.checkbox {}
 
-.modal-checkbox-user {}
 
-.checkbox-policy-link {}
+.modal-checkbox-user {
+    
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+}
 
-.modal-form-btn {}
+.checkbox-policy-link {
+    text-decoration: underline;
+        font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+}
+.review-from-custom-checkbox{
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    width:16px;
+    height:16px;
+    fill: transparent;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.checkbox:checked
++ .modal-checkbox-user
+.review-from-custom-checkbox {
+        fill: #404bbf;
+        border: 1px solid #404bbf;
+
+}
+.checkbox:focus
++.modal-checkbox-user
+.review-from-custom-checkbox {
+    fill: #404bbf;
+    border: 1px solid #404bbf;
+}
+
+.modal-form-btn {
+   
+        min-width: 169px;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 4px;
+        padding: 16px 32px;
+        border: none;
+        background-color: #4d5ae5;
+        color: #ffffff;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+background-color:#404bbf;
+}
 
 
 .footer {
